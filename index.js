@@ -5,6 +5,7 @@
 'use strict';
 
 var React = require('react');
+var PropTypes = require('prop-types');
 
 module.exports = function getContextProviderCurried(context, children) {
   if (typeof children === 'undefined') {
@@ -24,7 +25,7 @@ function getContextProvider(context, children) {
       return context;
     },
     childContextTypes: Object.keys(context).reduce(function (obj, key) {
-      obj[key] = React.PropTypes.any;
+      obj[key] = PropTypes.any;
       return obj;
     }, {}),
     render: function render() {
