@@ -11,7 +11,8 @@
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">= 9"
+    "react": ">= 9",
+    "prop-types": ">= 9"
   },
   "repository": {
     "type": "git",
