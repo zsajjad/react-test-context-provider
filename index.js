@@ -4,8 +4,9 @@
  */
 'use strict';
 
-var React = require('react');
-var PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
+const React = require('react');
+const PropTypes = require('prop-types');
 
 module.exports = function getContextProviderCurried(context, children) {
   if (typeof children === 'undefined') {
@@ -18,7 +19,7 @@ module.exports = function getContextProviderCurried(context, children) {
 };
 
 function getContextProvider(context, children) {
-  var ContextProvider = React.createClass({
+  var ContextProvider = createReactClass({
     displayName: 'ContextProvider',
 
     getChildContext: function getChildContext() {
